@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 4
-  numSpheres: 100
+  numSpheres: 150
   colorWaveSpeed: 0.001
   sphereMaterial: {fileID: 2100000, guid: 83a9e5c5cab6b4d76ae1f7ccea2932e9, type: 2}
 --- !u!4 &1612036648

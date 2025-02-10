@@ -75,7 +75,7 @@ public class CreateHeart : MonoBehaviour
             Vector3 baseSpherePosition = new Vector3(size * xPos, size * yPos, i * 0.0001f);
             float distance = Vector3.Distance(baseSpherePosition, Camera.main.ScreenToWorldPoint(mousePosition));
 
-            float inverseDistance = Mathf.Max(1 - distance / 4f, 0f) * 1.25f;
+            float inverseDistance = Mathf.Max(1f - distance / 3, 0f) * 3f;
 
             Vector3 direction = Vector3.Normalize(new Vector2(xPos, yPos));
 
@@ -83,6 +83,11 @@ public class CreateHeart : MonoBehaviour
             {
                 direction.y = 1f;
             }
+
+            System.Random random = new System.Random(i);
+
+            direction.x += (float) random.NextDouble() * 2 - 1;
+            direction.y += (float) random.NextDouble() * 2 - 1;
 
             direction *= inverseDistance;
 
